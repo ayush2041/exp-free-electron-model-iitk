@@ -1,1 +1,186 @@
-/* You CSS goes in here */
+body{
+    margin: 0;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.header{
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.header h1{
+    text-align: center;
+   font-size: 2.5vw;
+}
+
+.simulate{
+    width:77%;
+    height: 37.5rem;
+    border: 1px solid black;
+    position: relative;
+}
+#message{
+    margin-left: 1%;
+    flex: 1;
+    background-color: antiquewhite;
+    text-align: center;
+    border: 1px solid black;
+    width: 12.5rem;
+    height: 37.5rem;
+    position: relative;
+}
+#ins{
+    margin: 0;
+    padding: 0;
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#text{
+    margin: 0;
+    font-size: 2.4vw;
+    font-weight: 100;
+    color: blue;
+}
+.simulate #lab{
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    position: absolute;
+}
+
+#work{
+    width:77%;
+    height: 37.5rem;
+    border: 1px solid black;
+    position:absolute;
+    
+}
+
+#pcimage{
+    position:relative;
+    visibility: visible;
+    margin: 0px;
+    padding: 0px;
+    width: 10.2em;
+    height: 11.5em;
+    transform: translate(4.6em, 11.2em);
+}
+
+#pcimage:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+
+#pc{
+    height: 11.5em;
+    width: 10.2em;
+    visibility: visible;
+}
+
+#pc:hover{
+    height: 11.6em;
+    width: 10.3em;
+}
+
+#softwarepcimage{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    top: 80%;
+}
+
+
+ #spectrometer{
+    position:relative;
+    margin: 0;
+    padding: 0;
+    height: 11.5em;
+    width: 11.2em;
+    visibility: visible;
+    transform: translate(15.5em, 1em);
+}
+
+#spectrometer:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+
+#spectoimg{
+    height: 11.5em;
+    width: 11.2em;
+    visibility: visible;
+}
+
+#spectoimg:hover{
+    height: 11.6em;
+    width: 11.3em;
+}
+
+#hovspecto{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    top: 70%;
+}
+
+#pippete{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 8.2em;
+    visibility: visible;
+    transform: translate(30.5em, -5em);
+}
+#pippete:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+
+.pippeteimg{
+    height: 8.5rem;
+    width: 1rem;
+    visibility: visible;
+    transform: rotate(90deg);
+}
+.pippeteimg:hover{
+    height: 8.6rem;
+    width: 1.1rem;
+}
+#hovpippete{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -4em);
+}
+
