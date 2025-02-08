@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="main">
+		<div class="header">
+			<h1>
+				Electronic spectra of conjugated dye and test of free electron model
+			</h1>
+		</div>
+		<div class="footer">
+			<div class="simulate" id="simulator">
+				<img id="lab" src="./images/lab2.png" alt="images">
+			</div>
+			<div id="work">				
+						<img id="a1" class="machine" src="./images/specto-on.png" alt="machine" onclick="changeImage()">
+						<input type="radio" id="powbtn" class="radio" onclick="start()" >
+						<img id="a2" class="solvent" src="./images/Cyclohexane.png" alt="solvent" onclick="pourSolvent()" title="beaker">
+						<!-- Bottle Image -->
+						<img id="a3" src="./images/Conical flask.png" class="conicalflask" onclick="pourWater()" title="triene">
+						<!-- Bowl -->
+						<div id="a4" class="cuvette"  onclick="pourBottle()">
+							<div id="a5" class="water-fill" ></div>
+							<img id="a6" class="cuvetteimage" src="./images/cuvette-1.png" alt="abc" title="solution">
+						</div>
+						<div id="a8" class="refrence" onclick="pourBottle2()">
+							<div id="a9" class="solvent-fill"></div>
+							<img id="a7" class="cuvetteimage" src="./images/cuvette-1.png" alt="image" title="refrence">
+						</div>
+						
+				<button id="start"><a href="graph.html">Next</a></button>
+			</div>
+			<div id="message">
+				<h1 id="ins">Instructions</h1>
+				<h1 id="text" class="step1">
+					Turn -ON the spectrophotometer and wait for 30 minutes.
+				</h1>
+			</div>
+		</div>
+		
+	</div>
+
+	<script src="./js/main.js"></script>
+</body>
+</html>

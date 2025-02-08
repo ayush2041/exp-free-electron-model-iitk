@@ -16,11 +16,14 @@ body{
 .header{
     background-color: aqua;
     border: 1px solid black;
+    height: 30px;
 }
 
 .header h1{
+    font-family: Helvetica, sans-serif;
+    margin-top: 0;
     text-align: center;
-   font-size: 2.5vw;
+   font-size: 2vw;
 }
 
 .simulate{
@@ -68,33 +71,33 @@ body{
     
 }
 
-#pcimage{
+.pc{
     position:relative;
     visibility: visible;
     margin: 0px;
     padding: 0px;
-    width: 10.2em;
+    width: 12.2em;
     height: 11.5em;
     transform: translate(4.6em, 11.2em);
 }
 
-#pcimage:hover h1{
+.pc:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 
-#pc{
+.pcimage{
     height: 11.5em;
-    width: 10.2em;
+    width: 12.2em;
     visibility: visible;
 }
 
-#pc:hover{
+.pcimage:hover{
     height: 11.6em;
-    width: 10.3em;
+    width: 12.3em;
 }
 
-#softwarepcimage{
+.hovpc{
     position: absolute;
     font-size: 1.5vw;
     color: black;
@@ -113,7 +116,7 @@ body{
     margin: 0;
     padding: 0;
     height: 11.5em;
-    width: 11.2em;
+    width: 10.2em;
     visibility: visible;
     transform: translate(15.5em, 1em);
 }
@@ -125,13 +128,13 @@ body{
 
 #spectoimg{
     height: 11.5em;
-    width: 11.2em;
+    width: 10.2em;
     visibility: visible;
 }
 
 #spectoimg:hover{
     height: 11.6em;
-    width: 11.3em;
+    width: 10.3em;
 }
 
 #hovspecto{
@@ -184,3 +187,378 @@ body{
     transform: translate(1.5em, -4em);
 }
 
+#conicalflask{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 8.2em;
+    visibility: visible;
+    transform: translate(28.5em, -16em);
+}
+#conicalflask:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.flaskimg{
+    height: 8.5rem;
+    width: 3rem;
+    visibility: visible;
+}
+.flaskimg:hover{
+    height: 8.6rem;
+    width: 3.1rem;
+}
+#hovflask{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -10em);
+}
+
+#cuvette{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 6.5em;
+    width: 4.2em;
+    visibility: visible;
+    transform: translate(32.5em, -18em);
+}
+#cuvette:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.cuvetteimg{
+    height: 3.5rem;
+    width: 3rem;
+    visibility: visible;
+}
+.cuvetteimg:hover{
+    height: 3.6rem;
+    width: 3.1rem;
+}
+#hovcuvette{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -5em);
+}
+
+#box1{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 5.2em;
+    visibility: visible;
+    transform: translate(38.5em, -26em);
+}
+#box1:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.box1img{
+    height: 6.5rem;
+    width: 6rem;
+    visibility: visible;
+}
+.box1img:hover{
+    height: 6.6rem;
+    width: 6.1rem;
+}
+#hovbox1{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -10em);
+}
+
+#box2{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 5.2em;
+    visibility: visible;
+    transform: translate(42.5em, -30.8em);
+}
+#box2:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.box2img{
+    height: 5.5rem;
+    width: 5rem;
+    visibility: visible;
+}
+.box2img:hover{
+    height: 5.6rem;
+    width: 5.1rem;
+}
+#hovbox2{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -10em);
+}
+
+#box3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 4.2em;
+    visibility: visible;
+    transform: translate(45.5em, -36em);
+}
+#box3:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.box3img{
+    height: 4.5rem;
+    width: 4.5rem;
+    visibility: visible;
+}
+.box3img:hover{
+    height: 4.6rem;
+    width: 4.6rem;
+}
+#hovbox3{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -10em);
+}
+
+#box4{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 7.5em;
+    width: 6.2em;
+    visibility: visible;
+    transform: translate(50.5em, -39em);
+}
+#box4:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.box4img{
+    height: 5.5rem;
+    width: 5.5rem;
+    visibility: visible;
+}
+.box4img:hover{
+    height: 5.6rem;
+    width: 5.6rem;
+}
+#hovbox4{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    transform: translate(1.5em, -10em);
+}
+
+
+#alfoil{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 5.5em;
+    width: 5.2em;
+    visibility: visible;
+    transform: translate(36.5rem, -46.5rem);
+}
+#alfoil:hover h1{
+    visibility: visible;
+    transition: 0.1s;
+}
+.alfoilimg{
+    height: 5.5rem;
+    width: 5rem;
+    visibility: visible;
+}
+.alfoilimg:hover{
+    height: 5.6rem;
+    width: 5.1rem;
+}
+#hovalfoil{
+    position: absolute;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    visibility: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    
+}
+
+#start{
+    position: absolute;
+    border-radius: 30%;
+    font-size: 1vw;
+    left: 90%;
+    top: 90%;
+    border: none;
+    color: white;
+    background-color: green;
+    box-shadow: 2px 2px 0px 1px black;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1%;
+}
+
+#start a{
+    text-decoration: none;
+    color: white;
+}
+
+/* steps */
+
+.machine{
+    width: 16.2em;
+    height: 16.5em;
+    transform: translate(4.6em, 15.2em);
+}
+
+.conicalflask {
+    width: 50px;
+    transform: translate(19.6rem, 12rem);
+    transition: all 2s ease-in-out;
+    transform-origin: top right;
+}
+
+.cuvette {
+    position:absolute;
+    width: 6rem;
+    height: 6rem;
+    transition: all 2s ease-in-out;
+    transform: translate(30.5rem, 6.5rem);
+}
+#a6{
+    width: 6rem;
+    height: 5rem;
+    position: absolute;
+    overflow: hidden;
+    top: 1rem;
+    transition: all 2s ease-in-out;
+}
+
+.solvent{
+    width: 80px;
+    transform: translate(30rem, 15.5rem);
+    transition: all 2s ease-in-out;
+    transform-origin: top right;
+}
+
+.refrence{
+    position:absolute;
+    width: 6rem;
+    height: 6rem;
+    transition: all 2s ease-in-out;
+    /* transform: translate(25rem, 7.5rem); */
+}
+
+#a7{
+    width: 6rem;
+    height: 5rem;
+    position: absolute;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    transform: translate(25rem, 7.5rem);
+}
+
+.solvent-fill{
+    width: 20%;
+    height: 0;
+    background: lightblue;
+    position: absolute;
+    top: 8.5rem;
+    left: 27.4rem;
+    transition: height 2s ease-in-out;
+}
+
+
+/* Water in the cuvette */
+.water-fill {
+    width: 20%;
+    height: 0;
+    background: rgb(173, 230, 179);
+    position: absolute;
+    bottom: 0.7rem;
+    left: 2.4rem;
+    transition: height 2s ease-in-out;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    outline: none;
+    background-color: rgb(247, 6, 6);
+    cursor: pointer;
+}
+input[type="radio"]:checked {
+    background-color: rgb(9, 187, 57);
+}
+.radio{
+    transform: translate(-8.5rem, 14rem);
+}
+
+/* Graph */
+
+.card{
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    background-color: white;
+    border: 5px solid black ;
+    left: 10%;
+    bottom: 40%;
+}
+#mychart{
+    height: 100%;
+    width: 100%;
+}
