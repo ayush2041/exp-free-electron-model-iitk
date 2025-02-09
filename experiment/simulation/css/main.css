@@ -35,7 +35,7 @@ body{
 #message{
     margin-left: 1%;
     flex: 1;
-    background-color: antiquewhite;
+    background-color:blanchedalmond;
     text-align: center;
     border: 1px solid black;
     width: 12.5rem;
@@ -551,14 +551,28 @@ input[type="radio"]:checked {
 
 .card{
     position: absolute;
-    width: 40%;
-    height: 30%;
+    width: 50%;
+    height: 45%;
     background-color: white;
     border: 5px solid black ;
-    left: 10%;
-    bottom: 40%;
+    left: 28.5%;
+    bottom: 34%;
 }
 #mychart{
     height: 100%;
     width: 100%;
+}
+.button{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    width: 50%;
+    height: 5%;
+    left: 30%;
+    top: 70%;
+    background-color: azure;
+}
+.auto{
+    margin-left: 2%;
+    box-shadow: 1.5px 1.5px 0px 1px black;
 }

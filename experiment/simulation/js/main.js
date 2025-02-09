@@ -11,7 +11,7 @@ function speak(text){
     window.speechSynthesis.speak(text_speak)
 }
 
-window.addEventListener('',()=>{
+window.addEventListener('load',()=>{
     speak(txt.innerText);
 })
 
@@ -19,11 +19,13 @@ btn.addEventListener('click',()=>{
     speak(txt1.innerText)
 })
 
+
 // process
 
 function start(){
     let msg = document.getElementById("text");
     msg.innerText = "click on the flask to put prepared solution  in cuvette."
+    speak(msg.innerText)
 }
 
 function pourWater() {
@@ -45,6 +47,7 @@ function pourWater() {
     }, 1500);
 
     msg.innerText = "click on beaker  to fill solvent in refrence cuvette."
+    speak(msg.innerText);
 }
 
 function pourSolvent(){
@@ -65,6 +68,7 @@ function pourSolvent(){
 
     let msg = document.getElementById("text");
     msg.innerText = "click on solution cuvette to kept in spectrophotometer."
+    speak(msg.innerText);
 }
 
 function pourBottle() {
@@ -79,6 +83,7 @@ function pourBottle() {
 
     let msg = document.getElementById("text");
     msg.innerText = "click on refrence cuvette to kept in spectrophotometer."
+    speak(msg.innerText);
 }
 
 function pourBottle2() {
@@ -93,10 +98,15 @@ function pourBottle2() {
 
      let msg = document.getElementById("text");
     msg.innerText = "close the cover of spectrophotometer"
+    speak(msg.innerText);
 }
 
 function changeImage(){
- let img =  document.getElementById("a1").src = "./images/specto-off.png";
+   document.getElementById("a1").src = "./images/specto-off1.png";
+
+   let msg = document.getElementById("text");
+   msg.innerText = "Click on next button to record the graph."
+   speak(msg.innerText);
 }
 
 //graph
