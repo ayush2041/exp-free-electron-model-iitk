@@ -1,34 +1,72 @@
+let currentStep = "step1";  //controls the experiment step
+
+//speak
 let btn = document.querySelector("#start");
 let txt = document.querySelector("#text");
 let txt1 = document.querySelector(".step1");
 
-function speak(text){
-    let text_speak = new SpeechSynthesisUtterance(text)
-    text_speak.rate = 1.2
-    text_speak.pitch = 1
-    text_speak.volume = 5
-    text_speak.lang = "hi-GB"
-    window.speechSynthesis.speak(text_speak)
-}
+// function speak(text){
+//     let text_speak = new SpeechSynthesisUtterance(text)
+//     text_speak.rate = 1.2
+//     text_speak.pitch = 1
+//     text_speak.volume = 5
+//     text_speak.lang = "hi-GB"
+//     window.speechSynthesis.speak(text_speak)
+// }
 
 window.addEventListener('load',()=>{
     speak(txt.innerText);
 })
 
 btn.addEventListener('click',()=>{
-    speak(txt1.innerText)
+    speak(txt1.innerText);
 })
 
+//timer
+function timer(){
+    let hand = document.getElementById("ph");
+    hand.style.transform = "translate(-26.5rem, -18rem)"
+
+    if(currentStep !== "step1") return;
+    currentStep = "step2";
+
+    let totalDuration = 10; // 5 seconds instead of 30 minutes
+let remainingTime = 30 * 60; // 30 minutes in seconds
+let intervalDuration = remainingTime / totalDuration; // Speed up factor
+let timerText = document.getElementById("timer");
+let progressCircle = document.querySelector(".progress");
+
+// Start countdown animation
+progressCircle.style.strokeDashoffset = 0;
+
+let interval = setInterval(() => {
+    remainingTime -= intervalDuration;
+    let minutes = Math.floor(remainingTime / 60);
+    let seconds = remainingTime % 60;
+    timerText.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    
+    if (remainingTime <= 0) {
+        clearInterval(interval);
+        timerText.textContent = "00:00";
+    }
+}, 1000);
+
+let time = document.getElementById("timer-container")
+setTimeout(() => {
+    time.style.display = "none"; // hide the cuvette
+}, 15000);
+
+//text
+let msg = document.getElementById("text");
+msg.innerText = "click on the flask to put prepared solution  in cuvette."
+speak(msg.innerText)
+}
 
 // process
 
-function start(){
-    let msg = document.getElementById("text");
-    msg.innerText = "click on the flask to put prepared solution  in cuvette."
-    speak(msg.innerText)
-}
-
 function pourWater() {
+    if(currentStep !== "step2") return;
+    currentStep = "step3";
     let bottle = document.getElementById("a3");
     let waterFill = document.getElementById("a5");
     let msg = document.getElementById("text");
@@ -51,6 +89,8 @@ function pourWater() {
 }
 
 function pourSolvent(){
+    if(currentStep !== "step3") return;
+    currentStep = "step4";
     let beaker = document.getElementById("a2");
     let solventFill = document.getElementById("a9");
 
@@ -72,6 +112,8 @@ function pourSolvent(){
 }
 
 function pourBottle() {
+    if(currentStep !== "step4") return;
+    currentStep = "step5";
     let bottle2 = document.getElementById("a4")
     
     // Move cuvette near the spectrophotometer and kept it
@@ -79,7 +121,7 @@ function pourBottle() {
 
     setTimeout(() => {
         bottle2.style.display = "none"; // hide the cuvette
-    }, 2500);
+    }, 5500);
 
     let msg = document.getElementById("text");
     msg.innerText = "click on refrence cuvette to kept in spectrophotometer."
@@ -87,6 +129,9 @@ function pourBottle() {
 }
 
 function pourBottle2() {
+    if(currentStep !== "step5") return;
+    currentStep = "step6";
+
     let bottle3 = document.getElementById("a8")
     
     // Move cuvette near the spectrophotometer and kept it
@@ -94,7 +139,7 @@ function pourBottle2() {
 
     setTimeout(() => {
         bottle3.style.display = "none";
-    }, 2500);
+    }, 4000);
 
      let msg = document.getElementById("text");
     msg.innerText = "close the cover of spectrophotometer"
@@ -102,6 +147,9 @@ function pourBottle2() {
 }
 
 function changeImage(){
+    if(currentStep !== "step6") return;
+    currentStep = "step7";
+
    document.getElementById("a1").src = "./images/specto-off1.png";
 
    let msg = document.getElementById("text");
@@ -162,3 +210,5 @@ var myChart = new Chart(ctx, {
     data: data,
     options: options
 });
+
+

@@ -56,6 +56,46 @@ body{
     font-weight: 100;
     color: blue;
 }
+
+/* timer */
+.timer-container {
+    position: relative;
+    top: 5%;
+    left: 10%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50%;
+    background: radial-gradient(circle, #222, #000);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+.progress-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+svg {
+    transform: rotate(-90deg);
+}
+circle {
+    transition: stroke-dashoffset 10s linear;
+    fill: none;
+}
+.background-ring {
+    stroke: #444;
+}
+.progress-ring circle {
+    stroke: #00ff00;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+}
+
+/* simulation */
 .simulate #lab{
     height: 100%;
     width: 100%;
@@ -454,6 +494,30 @@ body{
 }
 
 /* steps */
+#ph {
+    position: absolute;
+    height: 8%;
+    width: 6%;
+    transition: all;
+    transition-duration: 1s;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+    visibility: visible;
+    rotate: 180deg;
+    transform: translate(10rem,-26rem);
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .machine{
     width: 16.2em;
