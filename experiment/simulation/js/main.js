@@ -5,14 +5,14 @@ let btn = document.querySelector("#start");
 let txt = document.querySelector("#text");
 let txt1 = document.querySelector(".step1");
 
-// function speak(text){
-//     let text_speak = new SpeechSynthesisUtterance(text)
-//     text_speak.rate = 1.2
-//     text_speak.pitch = 1
-//     text_speak.volume = 5
-//     text_speak.lang = "hi-GB"
-//     window.speechSynthesis.speak(text_speak)
-// }
+function speak(text){
+    let text_speak = new SpeechSynthesisUtterance(text)
+    text_speak.rate = 1.2
+    text_speak.pitch = 1
+    text_speak.volume = 5
+    text_speak.lang = "hi-GB"
+    window.speechSynthesis.speak(text_speak)
+}
 
 window.addEventListener('load',()=>{
     speak(txt.innerText);
@@ -24,11 +24,11 @@ btn.addEventListener('click',()=>{
 
 //timer
 function timer(){
-    let hand = document.getElementById("ph");
-    hand.style.transform = "translate(-26.5rem, -18rem)"
-
     if(currentStep !== "step1") return;
     currentStep = "step2";
+
+    let hand = document.getElementById("ph");  // hand movement
+    hand.style.transform = "translate(-26.5rem, -18rem)"
 
     let totalDuration = 10; // 5 seconds instead of 30 minutes
 let remainingTime = 30 * 60; // 30 minutes in seconds
@@ -67,6 +67,10 @@ speak(msg.innerText)
 function pourWater() {
     if(currentStep !== "step2") return;
     currentStep = "step3";
+
+    let hand = document.getElementById("ph");
+    hand.style.transform = "translate(-31.5rem, -23rem)"
+
     let bottle = document.getElementById("a3");
     let waterFill = document.getElementById("a5");
     let msg = document.getElementById("text");
@@ -91,6 +95,10 @@ function pourWater() {
 function pourSolvent(){
     if(currentStep !== "step3") return;
     currentStep = "step4";
+    
+    let hand = document.getElementById("ph");
+    hand.style.transform = "translate(-15.5rem, -21rem)"
+
     let beaker = document.getElementById("a2");
     let solventFill = document.getElementById("a9");
 
@@ -114,6 +122,10 @@ function pourSolvent(){
 function pourBottle() {
     if(currentStep !== "step4") return;
     currentStep = "step5";
+
+    let hand = document.getElementById("ph");
+    hand.style.transform = "translate(-10rem, -21rem)"
+
     let bottle2 = document.getElementById("a4")
     
     // Move cuvette near the spectrophotometer and kept it
@@ -132,6 +144,9 @@ function pourBottle2() {
     if(currentStep !== "step5") return;
     currentStep = "step6";
 
+    let hand = document.getElementById("ph"); 
+    hand.style.transform = "translate(8rem, -13rem)"
+
     let bottle3 = document.getElementById("a8")
     
     // Move cuvette near the spectrophotometer and kept it
@@ -139,7 +154,7 @@ function pourBottle2() {
 
     setTimeout(() => {
         bottle3.style.display = "none";
-    }, 4000);
+    }, 3500);
 
      let msg = document.getElementById("text");
     msg.innerText = "close the cover of spectrophotometer"
@@ -150,6 +165,11 @@ function changeImage(){
     if(currentStep !== "step6") return;
     currentStep = "step7";
 
+    let hand = document.getElementById("ph"); 
+    setTimeout(() => {
+        hand.style.display = "none";
+    }, 2000);
+
    document.getElementById("a1").src = "./images/specto-off1.png";
 
    let msg = document.getElementById("text");
@@ -159,14 +179,16 @@ function changeImage(){
 
 //graph
 
-// Get the context of the canvas element we want to select
+function graph1(){
+
+    // Get the context of the canvas element we want to select
 var ctx = document.getElementById('myChart').getContext('2d');
 
 // Define the data for the chart
 var data = {
     labels: ['250', '275', '300', '325', '350', '375', '400', '425'],
     datasets: [{
-        label: 'UVProbe-[Spectrum]',
+        label: '1,4–diphenyl–1,3butadiene',
         data: [0.05, 0.08, 0.29, 0.50, 0.20, 0.04, 0.01, 0.00],
         // fill: false,
         borderColor: 'rgba(75, 192, 192, 1)',
@@ -177,13 +199,15 @@ var data = {
 // Define the options for the chart
 var options = {
     responsive: true,
+    responsive: true,
     plugins: {
         legend: {
             display: true,
-            position: 'top',
+            position: 'top'
         },
-        tooltip: {
-            enabled: true,
+        title: {
+            display: true,
+            text: 'Adsorption vs Wavelength'
         }
     },
     scales: {
@@ -211,4 +235,61 @@ var myChart = new Chart(ctx, {
     options: options
 });
 
+} 
 
+function auto(){
+
+var ctx0 = document.getElementById('myChart').getContext('2d');
+
+var data0 = {
+    labels: ['250', '275', '300', '325', '350', '375', '400', '425'],
+    datasets: [{
+        label: "",
+        data: [],
+    }]
+};
+
+var options0 = {
+    plugins: {
+        legend: {
+            display: true,
+            position: 'top'
+        },
+        title: {
+            display: true,
+            text: 'Adsorption vs Wavelength'
+        }
+    },
+    scales: {
+        x: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Wavelength'
+            }
+        },
+        y: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Absorbance'
+            }
+        }
+    }
+};
+
+// Create the chart
+var myChart = new Chart(ctx0, {
+    type: 'line',
+    data: data0,
+    options: options0
+});
+
+
+}
+
+let strt = document.getElementById("st");
+
+strt.addEventListener('click',()=>{
+    graph1();
+})
