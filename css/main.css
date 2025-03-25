@@ -10,26 +10,31 @@ body{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0.5rem;
+    margin: 0.9vh;
 }
 
 .header{
     background: linear-gradient(45deg, #04b7f8, aqua);
-    /* background-color: aqua; */
     border: 3px solid black;
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 99.9vw;
 }
 
 .header h1{
     font-family: Helvetica, sans-serif;
-    margin-top: 0;
+    margin-top: 2px;
+    margin-bottom: 0;
     text-align: center;
-   font-size: 2vw;
+   font-size: 2.5vw ;
+   border: 2px dashed black;
 }
 
 .simulate{
-    width:77%;
-    height: 37.5rem;
+    width:78vw;
+    height: 88vh;
     border: 3px solid black;
     position: relative;
 }
@@ -37,11 +42,10 @@ body{
     margin-left: 1%;
     flex: 1;
     background: linear-gradient(45deg, #f0d5ac , #f8ca8e);
-    /* background-color:blanchedalmond; */
     text-align: center;
     border: 3px solid black;
-    width: 12.5rem;
-    height: 37.5rem;
+    width: 20vw;
+    height: 88vh;
     position: relative;
 }
 #ins{
@@ -99,15 +103,15 @@ circle {
 
 /* simulation */
 .simulate #lab{
-    height: 100%;
-    width: 100%;
+    height: 88vh;
+    width: 78vw;
     visibility: visible;
     position: absolute;
 }
 
 #work{
-    width:77%;
-    height: 37.5rem;
+    width:78.9vw;
+    height: 88vh;
     position:absolute;
     
 }
@@ -117,9 +121,9 @@ circle {
     visibility: visible;
     margin: 0px;
     padding: 0px;
-    width: 12.2em;
-    height: 11.5em;
-    transform: translate(4.6em, 11.2em);
+    width: 18vw;
+    height: 35vh;
+    transform: translate(5vw, 20vh); 
 }
 
 .pc:hover h1{
@@ -128,14 +132,14 @@ circle {
 }
 
 .pcimage{
-    height: 11.5em;
-    width: 12.2em;
+    height: 35vh;
+    width: 18vw;
     visibility: visible;
 }
 
 .pcimage:hover{
-    height: 11.6em;
-    width: 12.3em;
+    height: 35.2vh;
+    width: 18.2vw;
 }
 
 .hovpc{
@@ -156,10 +160,10 @@ circle {
     position:relative;
     margin: 0;
     padding: 0;
-    height: 11.5em;
-    width: 10.2em;
+    height: 28vh;
+    width: 17vw;
     visibility: visible;
-    transform: translate(15.5em, 1em);
+    transform: translate(20vw, -7vh);
 }
 
 #spectrometer:hover h1{
@@ -168,14 +172,14 @@ circle {
 }
 
 #spectoimg{
-    height: 11.5em;
-    width: 10.2em;
+    height: 28vh;
+    width: 17vw;
     visibility: visible;
 }
 
 #spectoimg:hover{
-    height: 11.6em;
-    width: 10.3em;
+    height: 28.2vh;
+    width: 17.2vw;
 }
 
 #hovspecto{
@@ -195,10 +199,10 @@ circle {
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 8.2em;
+    height: 3vh;
+    width: 15vw;
     visibility: visible;
-    transform: translate(30.5em, -5em);
+    transform: translate(32vw, -18vh);
 }
 #pippete:hover h1{
     visibility: visible;
@@ -206,14 +210,14 @@ circle {
 }
 
 .pippeteimg{
-    height: 8.5rem;
-    width: 1rem;
+    height: 15vh;
+    width: 3vw;
     visibility: visible;
     transform: rotate(90deg);
 }
 .pippeteimg:hover{
-    height: 8.6rem;
-    width: 1.1rem;
+    height: 15.1vh;
+    width: 3.1vw;
 }
 #hovpippete{
     position: absolute;
@@ -225,30 +229,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -4em);
+    transform: translate(2vw, -7vh);
 }
 
 #conicalflask{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 8.2em;
+    height: 20vh;
+    width: 5vw;
     visibility: visible;
-    transform: translate(28.5em, -16em);
+    transform: translate(38vw, -38vh);
 }
 #conicalflask:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .flaskimg{
-    height: 8.5rem;
-    width: 3rem;
+    height: 20vh;
+    width: 5vw;
     visibility: visible;
 }
 .flaskimg:hover{
-    height: 8.6rem;
-    width: 3.1rem;
+    height: 20.1vh;
+    width: 5.1vw;
 }
 #hovflask{
     position: absolute;
@@ -260,30 +264,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -10em);
+    transform: translate(2vw, -28vh);
 }
 
 #cuvette{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 6.5em;
-    width: 4.2em;
+    height: 8vh;
+    width: 5vw;
     visibility: visible;
-    transform: translate(32.5em, -18em);
+    transform: translate(42vw, -39vh);
 }
 #cuvette:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .cuvetteimg{
-    height: 3.5rem;
-    width: 3rem;
+    height: 8vh;
+    width: 5vw;
     visibility: visible;
 }
 .cuvetteimg:hover{
-    height: 3.6rem;
-    width: 3.1rem;
+    height: 8.1vh;
+    width: 5.1vw;
 }
 #hovcuvette{
     position: absolute;
@@ -295,30 +299,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -5em);
+    transform: translate(2vw, -3vh);
 }
 
 #box1{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 5.2em;
+    height: 20vh;
+    width: 12vw;
     visibility: visible;
-    transform: translate(38.5em, -26em);
+    transform: translate(42vw, -66vh);
 }
 #box1:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .box1img{
-    height: 6.5rem;
-    width: 6rem;
+    height: 20vh;
+    width: 12vw;
     visibility: visible;
 }
 .box1img:hover{
-    height: 6.6rem;
-    width: 6.1rem;
+    height: 20.1vh;
+    width: 12.1vw;
 }
 #hovbox1{
     position: absolute;
@@ -330,30 +334,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -10em);
+    transform: translate(2vw, -28vh);
 }
 
 #box2{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 5.2em;
+    height: 20vh;
+    width: 12vw;
     visibility: visible;
-    transform: translate(42.5em, -30.8em);
+    transform: translate(48vw, -85vh);
 }
 #box2:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .box2img{
-    height: 5.5rem;
-    width: 5rem;
+    height: 20vh;
+    width: 12vw;
     visibility: visible;
 }
 .box2img:hover{
-    height: 5.6rem;
-    width: 5.1rem;
+    height: 20.1vh;
+    width: 12.1vw;
 }
 #hovbox2{
     position: absolute;
@@ -365,30 +369,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -10em);
+    transform: translate(2vw, -29vh);
 }
 
 #box3{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 4.2em;
+    height: 18vh;
+    width: 10vw;
     visibility: visible;
-    transform: translate(45.5em, -36em);
+    transform: translate(57vw, -104vh);
 }
 #box3:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .box3img{
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 18vh;
+    width: 10vw;
     visibility: visible;
 }
 .box3img:hover{
-    height: 4.6rem;
-    width: 4.6rem;
+    height: 18.1vh;
+    width: 10.1vw;
 }
 #hovbox3{
     position: absolute;
@@ -400,30 +404,30 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -10em);
+    transform: translate(2vw, -26vh);
 }
 
 #box4{
     position: relative;
     margin: 0;
     padding: 0;
-    height: 7.5em;
-    width: 6.2em;
+    height: 18vh;
+    width: 10vw;
     visibility: visible;
-    transform: translate(50.5em, -39em);
+    transform: translate(65vw, -118vh);
 }
 #box4:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .box4img{
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 18vh;
+    width: 10vw;
     visibility: visible;
 }
 .box4img:hover{
-    height: 5.6rem;
-    width: 5.6rem;
+    height: 18.1vh;
+    width: 10.1vw;
 }
 #hovbox4{
     position: absolute;
@@ -435,7 +439,7 @@ circle {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    transform: translate(1.5em, -10em);
+    transform: translate(2vw, -25vh);
 }
 
 
@@ -443,23 +447,23 @@ circle {
     position: relative;
     margin: 0;
     padding: 0;
-    height: 5.5em;
-    width: 5.2em;
+    height: 10vh;
+    width: 5vw;
     visibility: visible;
-    transform: translate(36.5rem, -46.5rem);
+    transform: translate(56vw, -123vh);
 }
 #alfoil:hover h1{
     visibility: visible;
     transition: 0.1s;
 }
 .alfoilimg{
-    height: 5.5rem;
-    width: 5rem;
+    height: 10vh;
+    width: 5vw;
     visibility: visible;
 }
 .alfoilimg:hover{
-    height: 5.6rem;
-    width: 5.1rem;
+    height: 10.1vh;
+    width: 5.1vw;
 }
 #hovalfoil{
     position: absolute;
@@ -657,3 +661,4 @@ marquee{
     height: 5%;
     background-color: bisque;
 }
+
