@@ -28,7 +28,7 @@ function timer(){
     currentStep = "step2";
 
     let hand = document.getElementById("ph");  // hand movement
-    hand.style.transform = "translate(-26.5rem, -18rem)"
+    hand.style.transform = "translate( -32.5vw, -35vh)"
 
     let totalDuration = 10; // 5 seconds instead of 30 minutes
 let remainingTime = 30 * 60; // 30 minutes in seconds
@@ -51,11 +51,6 @@ let interval = setInterval(() => {
     }
 }, 1000);
 
-let time = document.getElementById("timer-container")
-setTimeout(() => {
-    time.style.display = "none"; // hide the cuvette
-}, 15000);
-
 //text
 let msg = document.getElementById("text");
 msg.innerText = "click on the flask to put prepared solution  in cuvette."
@@ -69,23 +64,23 @@ function pourWater() {
     currentStep = "step3";
 
     let hand = document.getElementById("ph");
-    hand.style.transform = "translate(-31.5rem, -23rem)"
+    hand.style.transform = "translate(-40vw, -38vh)"
 
     let bottle = document.getElementById("a3");
     let waterFill = document.getElementById("a5");
     let msg = document.getElementById("text");
 
     // Move flask near the cuvette and tilt it
-    bottle.style.transform = "translate(8.6rem, 14rem) rotate(-40deg)";
+    bottle.style.transform = "translate(-2.2vw, 32vh) rotate(-80deg)";
     
     setTimeout(() => {
-        bottle.style.transform = 'translate(19.6rem, 12rem) '; // return the flask to its initial position
+        bottle.style.transform = 'translate(20vw, 28vh) ';  // return the flask to its initial position
       }, 2500);
 
 
     // Fill cuvette after 1.5s
     setTimeout(() => {
-        waterFill.style.height = "50px"; // Adjust water height
+        waterFill.style.height = "6vh"; // Adjust water height
     }, 1500);
 
     msg.innerText = "click on beaker  to fill solvent in refrence cuvette."
@@ -97,21 +92,21 @@ function pourSolvent(){
     currentStep = "step4";
     
     let hand = document.getElementById("ph");
-    hand.style.transform = "translate(-15.5rem, -21rem)"
+    hand.style.transform = "translate(-12vw, -50vh)"
 
     let beaker = document.getElementById("a2");
     let solventFill = document.getElementById("a9");
 
     // Move beaker near the cuvette and tilt it
-    beaker.style.transform = "translate(6.5rem, 10.5rem) rotate(-60deg)";
+    beaker.style.transform = "translate(8vw, 32vh) rotate(-75deg)";
 
     setTimeout(()=>{
-        beaker.style.transform = "translate(30rem, 15.5rem) rotate(0deg)"; // return the beaker to its initial position
+        beaker.style.transform = "translate(36vw, 32vh) rotate(0deg)"; // return the beaker to its initial position
     }, 2500);
 
     // Fill cuvette after 1.5s
     setTimeout(() => {
-        solventFill.style.height = "50px";  // Adjust water height
+        solventFill.style.height = "6vh";  // Adjust water height
     }, 1500);
 
     let msg = document.getElementById("text");
@@ -124,12 +119,12 @@ function pourBottle() {
     currentStep = "step5";
 
     let hand = document.getElementById("ph");
-    hand.style.transform = "translate(-10rem, -21rem)"
+    hand.style.transform = "translate(-17vw, -54vh)"
 
     let bottle2 = document.getElementById("a4")
     
     // Move cuvette near the spectrophotometer and kept it
-    bottle2.style.transform = "translate(6.5rem, 3.5rem) rotate(0deg)"; 
+    bottle2.style.transform = "translate(10vw, 5vh) rotate(0deg)"; 
 
     setTimeout(() => {
         bottle2.style.display = "none"; // hide the cuvette
@@ -145,12 +140,12 @@ function pourBottle2() {
     currentStep = "step6";
 
     let hand = document.getElementById("ph"); 
-    hand.style.transform = "translate(8rem, -13rem)"
+    hand.style.transform = "translate(16vw, -25vh)"
 
     let bottle3 = document.getElementById("a8")
     
     // Move cuvette near the spectrophotometer and kept it
-    bottle3.style.transform = "translateX(-18rem) translateY( -6rem) rotate(0deg)";
+    bottle3.style.transform = "translateX(-24vw) translateY(-8vh) rotate(0deg)";
 
     setTimeout(() => {
         bottle3.style.display = "none";
